@@ -3,16 +3,19 @@ The FliteEngine is Objective-C static library project containing light wrapper f
 
 It does not add any new features to Flite, it only exposes its funcionality as Objective-C class methods and combines this functionality with iOS _AVFoundation Framework_
 
-##Introduction
+## Introduction
 A few years ago I was looking for some Objective-C framework which would allow to speech text on iOS devices in our project. In that time i did not find any, but only tree plain speech synth libraries written i C - eSpeak, Flite and Festival. After couple days of research and attempts to integrate those libraries for iOS SDK I choosed eSpeak and Flite as candidates (I was able to successfully customize only eSpeak and Flite in reasonable time, they supports more languages, Google use eSpeek for its translation service…).
 
 In next couple of lines is described Flite speech synthesizer wrapper - FliteEngine.
 
-##Details
-The FliteEngine? is Objectice-C static library project containing very light wrapper for Flite open source speech synthesizer (based on release version 1.4). It does not add any new features to Flite, it only exposes a part of its funcionality as Objective-C class methods and combines this functionality with iOS AVFoundation Framework (to see all available properties of Flite synthesizer, please read documentation on its homepage url). It also uses standard delegate pattern by defining FliteEngineDelegate?. In static library project also exists a test target which contains simple iPhone app. This sample app has only a one screen with the UITextView for text input and the UIButton to start speech syntesis of an entered text.
+## Details
+The FliteEngine is Objectice-C static library project containing very light wrapper for Flite open source speech synthesizer (based on release version 1.4). It does not add any new features to Flite, it only exposes a part of its funcionality as Objective-C class methods and combines this functionality with iOS _AVFoundation Framework_ (to see all available properties of Flite synthesizer, please read documentation on its homepage url). It also uses standard delegate pattern by defining FliteEngineDelegate?. 
+In static library project also exists a test target which contains simple iPhone app. This sample app has only a one screen with the _UITextView_ for text input and the _UIButton_ to start speech syntesis of an entered text.
 
-Usage
-Usage of the FliteEngine? is very easy, You have to only add a standard dependency on the FliteEngine? static library project to Your project and add path to folder Flite_1_0/Classes in Target Build Settings: Header Search Paths
+### Usage
+Usage of the FliteEngine is very easy, You have to only add:
+* Dependency on the _FliteEngine_ static library project to Your project 
+* Add path to folder _Flite_1_0/Classes_ in Target Build Settings: _Header Search Paths_
 
 Then import the FliteEngine? header in class which is holding engine instance:
 ```objc
